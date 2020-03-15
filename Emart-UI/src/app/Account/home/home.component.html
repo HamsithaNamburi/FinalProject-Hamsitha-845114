@@ -1,0 +1,81 @@
+<!--         
+<div style="background-image: linear-gradient(grey,white,grey);background-size: 100% 100%; height:500px ;;">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  < <div class="icon-bar">
+    <img src="logo22.png" class="img-circle"   alt="Cinque Terre" width="100" height="90">
+    
+    <img src="Capture1.png" alt="Cinque Terre" align="middle" hspace="60" width="100" height="90">
+</div> 
+<div class="navbar">
+    <h2>Emart</h2>
+    
+  
+<div class="form-inline my-2 my-md-0"> 
+     <a [routerLink]="'buy-item'" routerLinkActive="router-link-active" >Buy-Item<i class=""></i> Home</a>
+        <a href="#"> <i class="fa fa-fw fa-search"></i> Search</a>
+        <a [routerLink]="'view-cart'" routerLinkActive="router-link-active"><i class="fa fa-fw fa-user"></i>View Cart</a>
+        <a [routerLink]="'view-profile'" routerLinkActive="router-link-active" >  <i class="fa fa fa-fw fa-user"></i>ViewProfile</a>
+        <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+       
+    <span>
+        <input class="form-control mr-md-4 navbar-brand" type="search" placeholder="Search" aria-label="Search">
+       
+        <button class="btn btn-outline-info my-2 my-sm-0 navbar-brand" type="submit">Search</button>
+
+    </span>
+   
+     <a href="#"> <i class=rch"></i> Search</a>"fa fa-fw fa-sea -->
+    <!-- <a [routerLink]="'home'" routerLinkActive="router-link-active" ><i class="fa fa-home"></i> Home</a>
+    <a [routerLink]="'about -us'" routerLinkActive="router-link-active" ><i class="fa fa-shopping-bag"></i>About us</a>
+ <a [routerLink]="'view-cart'" routerLinkActive="router-link-active"><i class="fa fa-fw fa-envelope"></i> Contact</a> 
+ <button [routerLink]="'login'" routerLinkActive="router-link-active" >Login</button> -->
+     <!-- <a [routerLink]="'view-profile'" routerLinkActive="router-link-active" >  <i class="fa fa fa-fw fa-user"></i>ViewProfile</a> -->
+     <!-- <a href="#"> 
+   
+    <hr />
+    <a href="#"><i class="fa fa-bell-o border-left-0" style="margin-left:50px "></i></a>
+    <a href="#"><i class=" fa fa-shopping-cart fa-50px" style="margin-right:100px "></i></a> 
+</div>
+</div>
+
+    <div class="container-fluid">
+        
+     <h1 class="ribbon">
+        <strong class="ribbon-content">
+        <a [routerLink]="'buyer-register'" routerLinkActive="router-link-active"  (click)="toggleDisplay()" >Buyer Register</a></strong>
+    </h1>
+    <h1 class="ribbon">   
+        <strong class="ribbon-content">
+        <a [routerLink]="'seller-register'" routerLinkActive="router-link-active"   (click)="toggleDisplay()">Seller Register</a></strong>
+    </h1>
+</div> 
+ 
+</div>
+   
+
+<router-outlet></router-outlet>-->
+
+<div class="container-fluid">
+    
+    <div class="row">
+<div class="col-md-10">
+    <h1 style="margin-left:50px; font-weight:800;">Welcome</h1>
+    <h2 style="margin-left:105px; font-weight:800; margin-top:15px;">To</h2>
+    <img  styel="margin-top:15px; margin-left:300px;"  src="assets/images/web-mobile.png" width="275px">
+</div>
+    <div  class="col-md-8 " style="float:right; margin-right:100px;margin-top:-18em;">
+    <h1 style="color: white; float:right; margin-right:60px;">Online Shopping</h1>
+   <div class="col-sm 4 text-right" style="color: white;margin-top:20px;margin-left:700px;float:right;">
+   <p>At Emart,we start our day by thinking about how to </p>
+   <p>serve our customers who make our businesses possible.</p>
+   <p>At Emart,we start our day by thinking about how to </p>
+   <button class="btn btn-primary" type="button" (click)="Buyer()">Buyer Register</button>
+   <button class="btn btn-primary" type="button" (click)="Seller()">Seller Register</button>
+    </div>
+    </div>
+</div>
+</div>

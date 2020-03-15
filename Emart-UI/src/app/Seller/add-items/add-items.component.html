@@ -1,0 +1,150 @@
+<!-- <meta name="viewport" content="width=device-width" />
+<title>@ViewBag.Title</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+jQuery library 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+ Popper JS 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+ Latest compiled JavaScript 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>  
+<div class="navbar">
+    <h2>Emart</h2>
+    
+  
+<div class="form-inline my-2 my-md-0"> 
+    
+       
+    <span>
+        <input class="form-control mr-md-4 navbar-brand" type="search" placeholder="Search" aria-label="Search">
+       
+        <button class="btn btn-outline-info my-2 my-sm-0 navbar-brand" type="submit"><i class="fa fa-fw fa-search"></i>Search</button>
+
+    </span>
+   
+     <a href="#"> <i class=rch"></i> Search</a>"fa fa-fw fa-sea 
+    <a [routerLink]="'home'" routerLinkActive="router-link-active" ><i class="fa fa-home"></i> Home</a>
+    <a [routerLink]="'view-items'" routerLinkActive="router-link-active" ><i class="fa fa-eye"></i>Add-Item</a>
+     <a [routerLink]="'view-reports'" routerLinkActive="router-link-active"><i class="fa fa-shopping-file"></i>View reports</a>
+     <a [routerLink]="'view-profile'" routerLinkActive="router-link-active" >  <i class="fa fa fa-fw fa-user"></i>ViewProfile</a>
+      <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a> 
+   
+    <hr />
+    
+</div>
+ </div> -->
+            <div class="card m-2" style="background-color:lightskyblue;">
+                <h6 class="ribbon">
+                    <strong class="ribbon-content">Add Items</strong>
+                    </h6>
+                <!-- <h5 class="card-header">Angular 8 Reactive Form Validation</h5> -->
+                <div class="card-body"  style="background:whitesmoke;margin-left:400px; margin-right:400px;margin-top:-1em; text-align: center; align-content:center;border-color: black ">
+                    <form [formGroup]="additems" (ngSubmit)="onSubmit()">
+                    
+                            <div class="offset-3">
+                            <div class="form-group col-8 ">
+                                <label>Category Id</label>
+                                <div class="form-group dropdown col-sm-11">
+                                    <select (change)="Get()" style="width: 200px;"  formControlName="categoryid">
+                                        <option value="0">Select Category</option>
+                                        <option *ngFor="let item of list" aria-placeholder="select category" value={{item.categoryId}}>{{item.categoryName}}</option>
+                                    </select>
+                                </div>
+                            </div><br/>
+                          
+                            <!-- <div class="form-group dropdown col-sm-11"> -->
+                                <label>subcategory id</label>
+                                <div class="form-group dropdown col-sm-11">
+                                    <select style="width:100px;" formControlName="subcategoryid">
+                                        <option *ngFor="let item of subcategory" value={{item.subcategoryId}}>{{item.subcategoryName}}</option>
+                                    </select>
+                
+                                </div>
+                            <!-- </div> -->
+                        <br/>
+                      
+                            <!-- <div class="form-group col-8 ">
+                                <label>Item_Id</label>
+                                <input type="text" class="text" formControlName="id" class="form-control form-rounded" [ngClass]="{ 'is-invalid': submitted && f.id.errors }" />
+                                <div *ngIf="submitted && f.id.errors" class="invalid-feedback">
+                                    <div *ngIf="f.id.errors.required">Last Name is required</div>
+                                    <div *ngIf="f.id.errors.pattern">Mobile no Must be Valid</div>
+                                </div>
+                            </div>
+                         -->
+                       <br/>
+                        <div class="form-group col-8">
+                            <label>Item Name</label>
+                            <input type="text" class="text" formControlName="name" class="form-control form-rounded" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+                            <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                                <div *ngIf="f.name.errors.required">Mobile no is required</div>
+                                <div *ngIf="f.name.errors.pattern">Mobile no Must be Valid</div>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="form-group col-8">
+                            <label>Description</label>
+                            <textarea type="text" class="text" formControlName="description" class="form-control form-rounded" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" ></textarea>
+                            <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
+                                <div *ngIf="f.description.errors.required">Email is required</div>
+                                <div *ngIf="f.description.errors.email">Email must be a valid email address</div>
+                            </div>
+                        </div>
+                    <br/>
+                     
+                            <div class="form-group col-8 ">
+                                <label>Price</label>
+                                <input type="number"class="text" formControlName="price" class="form-control form-rounded" [ngClass]="{ 'is-invalid': submitted && f.price.errors }" />
+                                <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
+                                    <div *ngIf="f.price.errors.required">Password is required</div>
+                                    <div *ngIf="f.price.errors.minlength">Password must be at least 6 characters</div>
+                                </div>
+                            </div>
+                            <div class="form-group col-8 ">
+                                <label>stock_number</label>
+                                <input type="number"class="text" formControlName="stock_number" class="form-control form-rounded" [ngClass]="{ 'is-invalid': submitted && f.stock_number.errors }" />
+                                <div *ngIf="submitted && f.stock_number.errors" class="invalid-feedback">
+                                    <div *ngIf="f.stock_number.errors.required">Password is required</div>
+                                    <div *ngIf="f.stock_number.errors.minlength">Password must be at least 6 characters</div>
+                                </div>
+                            </div>
+                            <div class="form-group col-8 ">
+                                <label>Remarks</label>
+                                <input type="text"class="text" formControlName="remarks" class="form-control form-rounded" [ngClass]="{ 'is-invalid': submitted && f.remarks.errors }" />
+                                <div *ngIf="submitted && f.remarks.errors" class="invalid-feedback">
+                                    <div *ngIf="f.remarks.errors.required">Password is required</div>
+                                    <div *ngIf="f.remarks.errors.minlength">Password must be at least 6 characters</div>
+                                </div>
+                            </div>
+                            <!-- <div class="form-group col-8 ">
+                                <label>Seller Id</label>
+                                <input type="text"class="text" formControlName="sellerid" class="form-control form-rounded" [ngClass]="{ 'is-invalid': submitted && f.sellerid.errors }" />
+                                <div *ngIf="submitted && f.sellerid.errors" class="invalid-feedback">
+                                    <div *ngIf="f.sellerid.errors.required">Password is required</div>
+                                    <div *ngIf="f.sellerid.errors.minlength">Password must be at least 6 characters</div>
+                                </div>
+                            </div> -->
+                            <div class="form-group col-12">
+                                <label>Image</label>
+                                <input type="file" formControlName="Img"  (change)="fileEvent($event)"  class="form-control form-rounded" [ngClass]="{ 'is-invalid': submitted && f.Img.errors }" />
+                                <div *ngIf="submitted && f.Img.errors" class="invalid-feedback">
+                                    <!-- <div *ngIf="f.Img.required">Password is required</div> -->
+  
+                                </div>
+                            </div>
+                            </div>
+                           
+                    <br/>
+                        
+                        <div class="text-center">
+                            <button class="btn btn-primary mr-1">submit</button>
+                            <!-- <button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button> -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+           
+

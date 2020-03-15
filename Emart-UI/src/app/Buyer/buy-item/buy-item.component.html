@@ -1,0 +1,105 @@
+<!-- <nav class="navbar navbar-expand-lg navbar-light border-bottom box-shadow mb-3"  style="background-color: #e3f2fd;">
+  <div class="container">
+      <h6 class="navbar-brand" ><img src="assets\images\Emart.png"width="100" height="35" alt=""></h6> 
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active ">
+        <a class="nav-link" [routerLink]="['/buyerindex']" >Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" [routerLink]="['/buyproduct']">Buyproducts</a>
+      </li>
+      <li class="nav-item ">
+          <a class="nav-link" [routerLink]="['/purchase-history']">PurchaseHistory</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link"[routerLink]="['/viewcart']">ViewCart</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/viewprofile']">Viewprofile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/search']">SearchItems</a>
+        </li>
+  
+  </ul>
+  
+    <div class="nav-item ml-auto">
+      <a class="nav-link" href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
+    </div>
+  
+  </div>
+</div>
+</nav>  -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>  
+<div class="navbar">
+  <h2>Emart</h2>
+  
+
+<div class="form-inline my-2 my-md-0"> 
+  <!-- <a [routerLink]="'buy-item'" routerLinkActive="router-link-active" >Buy-Item<i class=""></i> Home</a>
+      <a href="#"> <i class="fa fa-fw fa-search"></i> Search</a>
+      <a [routerLink]="'view-cart'" routerLinkActive="router-link-active"><i class="fa fa-fw fa-user"></i>View Cart</a>
+      <a [routerLink]="'view-profile'" routerLinkActive="router-link-active" >  <i class="fa fa fa-fw fa-user"></i>ViewProfile</a>
+      <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a> -->
+      <!-- <form [formGroup]="buyitem">
+          <div>
+          <li class="nav-item form-inline my-2 my-lg-0" id="search">
+          
+              <input class="form-control mr-sm-2" formControlName="search" type="search" placeholder="Search" aria-label="Search">
+              <button style="border-color:white;color: white;" (click)="search()" class="btn btn-dark my-2 my-sm-0" type="submit">Search</button>
+          
+          </li>
+          
+          
+          </div>
+          </form> -->
+ 
+  <!-- <a href="#"> <i class=rch"></i> Search</a>"fa fa-fw fa-sea -->
+  <a [routerLink]="'home'" routerLinkActive="router-link-active" ><i class="fa fa-home"></i> Home</a>
+  <a href="buy-item" ><i class="fa fa-shopping-bag"></i>Buy-Item</a>
+   <a href="view-cart" ><i class="fa fa-shopping-cart"></i>View Cart</a>
+   <a href="view-profile">  <i class="fa fa fa-fw fa-user"></i>ViewProfile</a>
+   <!-- <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a> -->
+ 
+  <hr />
+  <!-- <a href="#"><i class="fa fa-bell-o border-left-0" style="margin-left:50px "></i></a>
+  <a href="#"><i class=" fa fa-shopping-cart fa-50px" style="margin-right:100px "></i></a> -->
+</div>
+          </div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3" *ngFor="let item of item">
+    <form [formGroup]="buyitem"   (ngSubmit)="onSubmit()"   style="margin-top:2%;">
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <img  class="card-image-top" src='assets/images/{{item.image}}'>
+      Item Name:<input type="text" formControlName="name" value="{{item.itemName}}">
+      Price:<input type="number" formControlName="price" value="{{item.price}}">
+      <a href="#" class="btn btn-primary">Buy</a>
+      <a href="#" class="btn btn-primary">Add to cart</a>
+    </div>
+  </div>
+  
+  
+</form>
+</div>
+</div>
+</div>

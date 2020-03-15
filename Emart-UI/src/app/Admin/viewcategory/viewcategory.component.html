@@ -1,0 +1,62 @@
+<div class="fluid continer">      
+    <table class="table table-border"><tr>
+        <th>category Id</th>
+        <th>Category name</th>
+        <th>Brief Details</th>
+        
+    </tr>
+    <tr *ngFor="let item of list">  
+        <td>{{item.categoryId}}</td>
+       <td>{{item.categoryName}}</td>
+       <td>{{item.briefDetails}}</td>
+        <td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" (click)="viewprofile(item.categoryId)">Edit</button></td>
+        <td><button class="btn btn-primary" (click)="Delete(item.categoryId)">Delete</button></td>
+    </tr>
+    </table>
+    
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+      
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Update Category</h4>
+            </div>
+            <div class="modal-body">
+              <form [formGroup]="viewcategorys"  style="margin-top:2%;">
+                <div class="offset-3">
+                    <div class="form-group col-8">
+                      <label>Category Id</label>
+                        <input type="text" formControlName="cid" class="form-control" />
+                    <!-- <div *ngIf="submitted && f.cid.errors" class="invalid-feedback">
+                        <div *ngIf="f.cid.errors.required">Brief Details is required</div>
+                    </div> -->
+                
+                </div>
+                <div class="form-group col-8">
+                    <label>Category Name</label>
+                    <input type="text" formControlName="cname" class="form-control"  />
+                    <!-- <div *ngIf="submitted && f.cname.errors" class="invalid-feedback">
+                        <div *ngIf="f.cname.errors.required">Brief Details is required</div>
+                    </div> -->
+            
+            </div>
+                <div class="form-group col-8">
+                    <label>Brief Details</label>
+                    <input type="text" formControlName="brief_details" class="form-control"  />
+                    <!-- <div *ngIf="submitted && f.brief_details.errors" class="invalid-feedback">
+                        <div *ngIf="f.brief_details.errors.required">Brief Details is required</div>
+                    </div> -->
+            
+            </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)=" Edit()">Update</button>
+            </div>
+          </form>
+          </div>
+      
+        </div>
+      </div>
+

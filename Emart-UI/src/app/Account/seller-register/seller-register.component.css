@@ -1,0 +1,22 @@
+.card {
+    margin-left: 600px; /* Same as the width of the sidenav */
+    padding: 0px 10px;
+    offset-position: center;
+    
+}
+.nav.navbar-brand{
+    font-weight: 800;
+    font-style:bold;
+    font-size: xx-large;
+    text-decoration-color: cornflowerblue;
+    
+}
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color:grey;
+}
+.nav.navbar-nav.navbar-text li a{
+        color: white;
+       
+    }

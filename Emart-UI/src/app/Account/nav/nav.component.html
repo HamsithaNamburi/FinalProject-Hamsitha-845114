@@ -1,0 +1,38 @@
+<div class="fluid-container">
+    <header>
+  
+    </header>
+    <main>
+    <div class="background" style="widows:100%;">
+      <section>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <a href="#" class="navbar-brand"><h1>EMart</h1></a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav">
+              <a href="nav/home" class="nav-item nav-link active">Home</a>
+              <!-- <a href="About" class="nav-item nav-link">About</a> -->
+              <a href="contact" class="nav-item nav-link">Contact Us</a>
+          </div>
+          <ul class="nav navbar-nav navbar-right" style="clear: both;">
+            <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
+            <li><a [routerLink]="'./login'" routerLinkActive="router-link-active" ><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+    
+
+          <!-- <form class="form-inline ml-auto">
+              <input type="text" class="form-control mr-sm-2" placeholder="Search">
+              <button type="submit" class="btn btn-outline-light">Search</button>
+          </form> -->
+      </div>
+  </nav>
+  </section>
+  <router-outlet></router-outlet>
+  </div>
+  </main>
+  </div>
+  <app-footers></app-footers>
+

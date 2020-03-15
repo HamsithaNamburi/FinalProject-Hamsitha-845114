@@ -1,0 +1,189 @@
+/* .navbar {
+    width: 100%;
+      background-color:grey;
+      /*overflow: auto;*/
+      /* margin-bottom: 0;
+      border-radius: 0; 
+     background-color:grey;
+      border-style:groove;
+     
+    }
+    
+    .navbar a {
+      float: right;
+      /*padding: 12px;
+      color:white;
+      text-decoration: none;
+      font-size: 17px;
+      margin-left:10px;
+    }
+    
+    .navbar a:hover {
+      background-color:dodgerblue;
+    }
+    
+
+
+
+
+
+#button {
+    margin-left: 160px; /* Same as the width of the sidenav 
+    padding: 0px 10px;
+    height: 100px;
+    width: 1060px;
+    animation: blinkingText 1.2s infinite;
+    font-size:30px;
+    
+}
+.default {
+border-color: #e7e7e7;
+color: black;
+}
+
+.default:hover {
+background-color:black;
+}
+
+
+.card {
+    margin-left: 600px; /* Same as the width of the sidenav *
+    padding: 0px 10px;
+    
+    
+}
+.card-img-top{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    height: 150px;
+    align-content: center;
+}
+
+.row.content {
+    height: 100px;
+}
+
+/* Set gray background color and 100% height 
+.sidenav {
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    /*z-index: 1;
+    left: 0;*
+    color: white;
+    background-color:grey;
+    /*overflow-x: hidden;
+    padding-top: 20px;
+
+}
+
+
+.icon-bar {
+    width: 100%;
+    background-color: black;
+    overflow: auto;
+    margin-bottom:10px;
+}
+
+
+#bgimg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image:url("https://thumbs.dreamstime.com/b/gold-gift-box-black-background-festive-background-gold-gift-box-gold-ribbon-bow-black-background-flat-lay-top-167623046.jpg")
+}
+.nav.navbar-nav.navbar-centre li a{
+        color: white;
+    }
+
+/* On small screens, set height to 'auto' for sidenav and grid 
+@media screen and (max-width:767px) {
+    .sidenav {
+        height: auto;
+        padding: 15px;
+    }
+
+    .row.content {
+        height: auto;
+    }
+}
+.ribbon {
+    font-size: 16px !important;
+ This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different
+  font size you may have to play with the position of the ribbon elements 
+   
+    width: 50%;
+       
+    position: relative;
+    background: cornflowerblue;
+    color: #fff;
+    text-align: center;
+    padding: 1em 2em; /* Adjust to suit 
+    margin: 2em auto 3em; /* Based on 24px vertical rhythm. 48px bottom margin
+     - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. 
+   }
+   .ribbon:before, .ribbon:after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -1em;
+    border: 1.5em solid cornflowerblue;
+    z-index: 1;
+   }
+   .ribbon:before {
+    left: -2em;
+    border-right-width: 2em;
+    border-left-color: transparent;
+   }
+   .ribbon:after {
+    right: -2em;
+    border-left-width: 1.5em;
+    border-right-color: transparent;
+   }
+   .ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-color:cornflowerblue transparent transparent transparent;
+    bottom: -1em;
+    color:black;
+    text-shadow: 1px 1px 2px grey, 0 0 25px blue, 0 0 5px darkblue;
+   }
+   .ribbon .ribbon-content:before {
+    left: 0;
+    border-width: 1em 0 0 1em;
+    text-shadow: 1px 1px 2px grey, 0 0 25px blue, 0 0 5px darkblue;
+   }
+   .ribbon .ribbon-content:after {
+    right: 0;
+    border-width: 1em 1em 0 0;
+    text-shadow: 1px 1px 2px grey, 0 0 25px blue, 0 0 5px darkblue;
+   }
+   .container-fluid{
+       /* background-image: url("~/assets/images/website-template-free-download.png");
+       height: 100%;
+       width:100%; 
+      height: 100%;
+        /* background-image: linear-gradient(grey,white,grey); 
+      background-size: 100%;
+      height: 100%;
+        
+   } */
+   .t1{
+    text-align: justify;
+    text-justify: inter-word;
+    }
+    .btn-primary {
+        font-family: Raleway-SemiBold;
+        font-size: 13px;
+        /* color: rgba(58, 133, 191, 0.75); */
+        margin-left:150px;
+        letter-spacing: 1px;
+        line-height: 15px;
+        border: 2px solid rgba(58, 133, 191, 0.75);
+        border-radius: 40px;
+        /* background: transparent; */
+        transition: all 0.3s ease 0s;
+      }

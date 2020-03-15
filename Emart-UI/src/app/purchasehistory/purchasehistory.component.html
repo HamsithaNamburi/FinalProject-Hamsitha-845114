@@ -1,0 +1,284 @@
+<nav class="navbar navbar-expand-lg navbar-light border-bottom box-shadow mb-3"  style="background-color: #e3f2fd;">
+    <div class="container">
+        <h6 class="navbar-brand" ><img src="assets\images\Emart.png"width="100" height="35" alt=""></h6> 
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+         <li class="nav-item active ">
+          <a class="nav-link" [routerLink]="['/buyerindex']" >Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" [routerLink]="['/buyproduct']">Buyproducts</a>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link" [routerLink]="['/purchase-history']">PurchaseHistory</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link"[routerLink]="['/viewcart']">ViewCart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/viewprofile']">Viewprofile</a>
+          </li> 
+           <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/search']">SearchItems</a>
+          </li> 
+    
+    </ul>
+    
+      <div class="nav-item ml-auto">
+        <a class="nav-link" href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
+      </div>
+    
+    </div>
+  </div>
+  </nav> 
+
+<!--  
+             <div class="container"> 
+                 <div class="row">
+                    <div class="col-xs-12 col-md-4 offset-md-4">
+                        <div class="card ">
+                            <div class="card-header">
+                                <div class="row">
+                                    <h3 class="text-xs-center">Payment Details</h3>
+                                    <img class="img-fluid cc-img" src="https://www.prepbootstrap.com/Content/images/shared/misc/creditcardicons.png">
+                                </div>
+                            </div>
+                            <div class="card-body" >
+                                <form [formGroup]="form" class="float-xs-center" >
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div class="form-group">
+                                                <label>Transaction Type</label>
+                                                <div class="input-group">
+                                                    <input type="tel" class="form-control" formControlName="TransactionType" placeholder="specify TransactionType" />
+                                                    <span class="input-group-addon"><span class="fa fa-credit-card"></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <div class="form-group">
+                                                <span class="hidden-xs">ItemName</span><span class="visible-xs-inline"></span>
+                                                <input type="tel" class="form-control" formControlName="itemname">
+                                            </div>
+                                        </div>
+                                    </div>
+                                        <div class="row">
+                                        <div class="col-xs-12 float-xs-center">
+                                            <div class="form-group">
+                                                <label>price</label>
+                                                <input type="tel" class="form-control" formControlName="price" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                   
+                                </form>
+                            </div>
+                            <div class="card-footer">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <button class="btn btn-warning btn-lg btn-block">Process payment</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            
+            <!-- <style>
+                .cc-img {
+                    margin: 0 auto;
+                }
+            </style>  -->
+            <!-- <div class="container">
+              <div class="row">
+                  <div class="col-xs-12 col-md-4 offset-md-4">
+                      <div class="card ">
+                          <div class="card-header">
+                              <div class="row">
+                                  <h3 class="text-xs-center">Payment Details</h3>
+                                  <img class="img-fluid cc-img" src="https://www.prepbootstrap.com/Content/images/shared/misc/creditcardicons.png">
+                              </div>
+                          </div>
+                          <div class="card-body">
+                              <form [formGroup]="form">
+                                  <div class="row">
+                                      <div class="col-xs-12">
+                                          <div class="form-group">
+                                              <label>CARD NUMBER</label>
+                                              <div class="input-group">
+                                                  <input type="tel" class="form-control" placeholder="Valid Card Number" />
+                                                  <span class="input-group-addon"><span class="fa fa-credit-card"></span></span>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-xs-7 col-md-7">
+                                          <div class="form-group">
+                                              <label><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline">EXP</span> DATE</label>
+                                              <input type="tel" class="form-control" placeholder="MM / YY" />
+                                          </div>
+                                      </div>
+                                      <div class="col-xs-5 col-md-5 float-xs-right">
+                                          <div class="form-group">
+                                              <label>CV CODE</label>
+                                              <input type="tel" class="form-control" placeholder="CVC" />
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-xs-12">
+                                          <div class="form-group">
+                                              <label>CARD OWNER</label>
+                                              <input type="text" class="form-control" placeholder="Card Owner Names" />
+                                          </div>
+                                      </div>
+                                  </div>
+                              </form>
+                          </div>
+                          <div class="card-footer">
+                              <div class="row">
+                                  <div class="col-xs-12">
+                                      <button class="btn btn-warning btn-lg btn-block">Process payment</button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div> -->
+          <!-- <div class="row">
+            <div class="col-75">
+              <div class="container">
+                <form [formGroup]="form" (ngSubmit)="onSubmit()" >
+                
+                  <div class="row">
+                    <div class="col-50">
+                      <h3>Billing Address</h3>
+                      <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                      <input type="text" id="fname" formControlName="firstname" required>
+                      <div *ngIf="f.firstname.errors.required"> Full Name is required</div>
+                      <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                      <input type="text" id="email" formControlName="email" >
+                      <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                      <input type="text" id="adr" formControlName="address" >
+                      <label for="city"><i class="fa fa-institution"></i> City</label>
+                      <input type="text" id="city" formControlName="city" >
+          
+                      <div class="row">
+                        <div class="col-50">
+                          <label for="state">State</label>
+                          <input type="text" id="state" formControlName="state" >
+                        </div>
+                        <div class="col-50">
+                          <label for="zip">Zip</label>
+                          <input type="text" id="zip" formControlName="zip" >
+                        </div>
+                      </div>
+                    </div>
+          
+                    <div class="col-50">
+                      <h3>Payment</h3>
+                      <label for="fname">Accepted Cards</label>
+                      <img class="img-fluid cc-img" src="https://www.prepbootstrap.com/Content/images/shared/misc/creditcardicons.png">
+                      <!-- <div class="icon-container">
+                        <i class="fa fa-cc-visa" style="color:navy;"></i>
+                        <i class="fa fa-cc-amex" style="color:blue;"></i>
+                        <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                        <i class="fa fa-cc-discover" style="color:orange;"></i>
+                      </div> -->
+                      <!-- <select>
+                        <option value="0">Transaction Type</option>
+                        <option value="1">Creditcard</option>
+                        <option value="2">Debitcard</option>
+                        <option Value="3">Cash on Delivery</option>
+                      </select> 
+                      <div class="form-group">
+                      <fieldset>
+                        <label>Transaction Type</label>
+                    Creditcard:<input type="radio" value="creditcard" formControlName="t1" [(ngModel)] = 'transaction' ng-init="transaction = true" >
+                    Debit Card:<input type="radio" value="DebitCard" formControlName="t1" [(ngModel)] = 'transaction'>
+                    Cash on Delivery<input type="radio" value="cashondelivery" formControlName="t1" [(ngModel)] = 'transaction' ng-init="transaction=false">
+                  </fieldset>
+                </div>
+                <div *ngIf="transaction=='creditcard'||transaction=='DebitCard'  else cashondelivery"  class="form-group" >
+                
+                <!-- <ng-template #cashondelivery> 
+                  <label for="cname">Name on Card</label>
+                  <input type="text" id="cname" formControlName="cardname" placeholder="card Holder Name">
+                  <label for="ccnum">Credit card number</label>
+                  <input type="text" id="ccnum" formControlName="cardnumber" placeholder="1111-2222-3333-4444">
+                  <label for="expmonth">Exp Month</label>
+                  <input type="text" id="expmonth" formControlName="expmonth" placeholder="month">
+                  <div class="row">
+                    <div class="col-50">
+                      <label for="expyear">Exp Year</label>
+                      <input type="text" id="expyear" formControlName="expyear" placeholder="year">
+                    </div>
+                    <div class="col-50">
+                      <label for="cvv">CVV</label>
+                      <input type="text" id="cvv" formControlName="cvv" placeholder="cvv">
+                    </div>
+                  </div>
+                <!-- </ng-template>
+                <ng-template #cashondelivery>
+                  <div>
+                 <h1>  Orderd Palced Seccessfully</h1>
+                  </div>
+                </ng-template>
+                
+                      </div>
+                    
+                  </div> 
+                  </div> 
+              
+                  <label>
+                    <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+                  </label>
+                  <input type="submit" value="Continue to checkout"  (click)="b()"class="btn">
+                </form>
+              
+            </div>
+            </div> -->
+            <!-- ---------------------------------------------- -->
+            <table class="table table-striped custab">
+              <thead style="background:dodgerblue;color:aliceblue">
+             
+                  <tr>
+                     <!-- <th>Image</th> -->
+                      <th>ID</th>
+                      <!-- <th>Itemname</th> -->
+                      <th>TransactionType</th>
+                      <th>Status</th>
+                      <th>Quntity</th>
+                      <!-- <th>Date</th> -->
+                    
+                              
+                  </tr>
+              </thead>
+              <ng-container *ngFor="let purchase of purch"> 
+                  <ng-container *ngFor="let item of item">
+                 <tr *ngIf="item.itemId==purchase.ItemId">   
+                  <!-- <td><img class="card-img-top" src="assets\Images\{{item.image}}"> </td> -->
+                  <td >{{purchase.id}}</td>
+                   <!-- <td>{{item.itemName}}</td> -->
+                   <td>{{purchase.tName}}</td>
+                   <td>{{purchase.tStatus}}</td>
+                   <td>{{purchase.numberOfItems}}</td>
+                   <!-- <td>{{purchase.datetime}}</td> -->
+                  
+                 
+                
+               </tr>
+           </ng-container>
+          </ng-container>
+                 
+                     
+              </table>

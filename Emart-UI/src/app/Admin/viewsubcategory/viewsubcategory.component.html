@@ -1,0 +1,81 @@
+<div class="fluid-continer">      
+    <table class="table table-border"><tr>
+        <th>category Id</th>
+        <th>Subcategory Id</th>
+        <th>SubCategoryName</th>
+        <th>Brief Details</th>
+        <th>GST percentage</th>    
+    </tr>
+    <tr *ngFor="let cat of list">  
+        <td>{{cat.categoryId}}</td>
+       <td>{{cat.subcategoryId}}</td>
+       <td>{{cat.subcategoryName}}</td>
+       <td>{{cat.briefDetails}}</td>
+       <td>{{cat.gstper}}</td>
+        <td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" (click)="viewprofile(cat.subcategoryId)">Update</button></td>
+        <td><button type="button" class="btn btn-info btn-lg"  (click)="Delete(cat.subcategoryId)">Delete</button></td>
+    </tr>
+    </table>
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+      
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Update SubCategory</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+      
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form [formGroup]="addsubcategory"  style="margin-top:2%;">
+                    <div class="offset-3">
+                        <div class="form-group col-8">
+                            <input type="text" formControlName="category_id" class="form-control"  />
+                        <!-- <div *ngIf="submitted && f.category_id.errors" class="invalid-feedback">
+                            <div *ngIf="f.category_id.errors.required">Brief Details is required</div>
+                        </div> -->
+                    
+                    </div>
+                    <div class="form-group col-8">
+                        <label>SubCategory Name</label>
+                        <input type="text" formControlName="subcategory_name" class="form-control"/>
+                        <!-- <div *ngIf="submitted && f.subcategory_name.errors" class="invalid-feedback">
+                            <div *ngIf="f.subcategory_name.errors.required">Brief Details is required</div>
+                        </div> -->
+                
+                </div>
+                    <div class="form-group col-8">
+                        <label>Brief Details</label>
+                        <input type="text" formControlName="brief_details" class="form-control"  />
+                        <!-- <div *ngIf="submitted && f.brief_details.errors" class="invalid-feedback">
+                            <div *ngIf="f.brief_details.errors.required">Brief Details is required</div>
+                        </div> -->
+                
+                </div>
+               
+            <div class="form-group col-8">
+                <label>GST</label>
+                <input type="text" formControlName="GSTIN" class="form-control"  />
+                <!-- <div *ngIf="submitted && f.GSTIN.errors" class="invalid-feedback">
+                    <div *ngIf="f.GSTIN.errors.required">Brief Details is required</div>
+                </div> -->
+            
+                    </div>
+                    </div>
+              Modal body..
+                </form>
+            </div>
+      
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="Edit()">Update</button>
+            </div>
+      
+          </div>
+        </div>
+      </div>
+    </div>
+   
+   
+   

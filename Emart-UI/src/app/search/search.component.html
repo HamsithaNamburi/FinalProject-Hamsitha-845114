@@ -1,0 +1,179 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<nav class="navbar navbar-expand-lg navbar-secondary border-bottom box-shadow mb-3"  style="background-color:gray">
+    <div class="container">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- <h6 class="navbar-brand" ><img src="assets\images\Emart.png"width="100" height="35" alt=""></h6> 
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>--!
+  
+    
+      <ul class="navbar-nav mr-auto">
+         <li class="nav-item active ">
+          <a class="nav-link" [routerLink]="['/buyerindex']" >Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" [routerLink]="['/buyproduct']">Buyproducts</a>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link" [routerLink]="['/purchase-history']">PurchaseHistory</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link"[routerLink]="['/viewcart']">ViewCart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/viewprofile']">Viewprofile</a>
+          </li> 
+           <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/search']">SearchItems</a>
+          </li> 
+    
+    </ul>
+     -->
+     
+     
+     <!-- <a [routerLink]="'nav/home'" routerLinkActive="router-link-active" ><i class="fa fa-home"></i> Home</a> -->
+     <a href="nav/home">Home</a>
+     <a href="search"><i class="fa fa-shopping-bag"></i>Search</a>
+      <a href="add-to-cart"><i class="fa fa-shopping-cart"></i>View Cart</a>
+      <a href="view-profile"><i class="fa fa fa-fw fa-user"></i>ViewProfile</a>
+      <div class="nav-item ml-auto">
+        <a class="nav-link" href="nav/home"><span class="glyphicon glyphicon-log-out"></span> Logout</a>
+      </div>
+    
+    </div>
+  </div>
+  </nav> 
+  <!-- <form [formGroup]="form"> -->
+    <div>
+    <li class="nav-item form-inline my-2 my-lg-0" id="search">
+        <input   type="text" placeholder="Search" aria-label="Search" [(ngModel)]="itemName" >
+        <button style="border-color:white;color: white;" (click)="Search(itemName)" class="btn btn-dark my-2 my-sm-0" type="submit">Search</button>
+    
+    </li>
+
+    </div>
+    
+<br>
+<br>
+ <section class="sections random-product"> 
+  <div class="container-fluid">
+      <div class="container">
+          <div  class="row">
+              <div  class="col-md-3">    
+                <div style="margin-top: 20px;">
+                  <div *ngFor="let i of list">
+                  <div class="card">
+                      <img style="height:200px;" class="card-img-top" src='assets/images/{{i.image}}' alt="Card image cap"> 
+                      <div style="height:10px;" class="card-body">
+                          <h5  class="card-title">
+                              <a href="#" class="text-dark">{{i.itemName}}</a>
+                              Price:<label><i class="fa fa-rupee"></i>{{i.price}}</label>
+                          </h5>
+                      </div>
+                    
+                      <div style="height: 40px;" >
+                          <div class="badge badge-danger float-right"></div>
+                          <div style="margin-bottom: 50px;width:252px;" class="btn-group" role="group">
+                            <button style="border-color: white;background: rgb(0,0,0,0.5);" class="btn" (click)="Addtocart(i)">ADD</button>
+                            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" (click)="viewProfile(i)">Buy</button>
+                            
+                             <br>
+                              <small class="text-muted"><del></del></small>
+                          </div>
+                      </div>
+                  </div>
+                  </div>
+                </div> 
+                </div>
+              </div>
+              </div>
+              </div>
+              <div class="modal" id="myModal">
+                <div class="modal-dialog"> 
+                  <div class="modal-content">
+              
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                      <h4 class="modal-title">Buy Items</h4>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+              
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <form [formGroup]="form"  style="margin-top:2%;"> 
+                            <div class="offset-3">
+                              <div class="row"> 
+                                <div class="form-group col-8">
+                                    <label>Item Name</label>
+                                    <input type="text" formControlName="name" class="form-control"  />
+                                <!-- <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                                    <div *ngIf="f.name.errors.required">Item name is required</div>
+                                </div> -->
+                            
+                            </div>
+                            <div class="form-group col-8">
+                                <label>Stock Number</label>
+                                <input type="text" formControlName="stocknumber" class="form-control"  />
+                                <!-- <div *ngIf="submitted && f.stocknumber.errors" class="invalid-feedback">
+                                    <div *ngIf="f.stocknumber.errors.required">Stock Number is required</div>
+                                </div> -->
+                        
+                        </div>
+                        <div class="form-group col-8">
+                          <label>Price</label>
+                          <input type="text" formControlName="price" class="form-control"  />
+                          <!-- <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
+                              <div *ngIf="f.price.errors.required">Brief Details is required</div>
+                          </div> -->
+                  
+                  </div>
+                  <div class="form-group col-8 ">
+                    <label>Remarks</label>
+                    <textarea type="text" class="text" formControlName="remarks" class="form-control form-rounded"></textarea>
+                    <!-- <div *ngIf="submitted && f.remarks.errors" class="invalid-feedback">
+                        <div *ngIf="f.remarks.errors.required">Last Name is required</div>
+                        <div *ngIf="f.remarks.errors.pattern">Mobile no Must be Valid</div>
+                    </div> -->
+                </div>
+            
+           <br/>
+            <div class="form-group col-8">
+                <label>Transaction Name</label>
+                <div class="form-group">
+                  <select style="width:100px;" formControlName="TName">
+                      <option *ngFor="let item of List2" >{{item}}</option>
+                  </select>
+</div>
+              </div>
+                            <div class="form-group col-8">
+                                <label>Total</label>
+                                <input type="text" formControlName="total" (click)="focusIn()" class="form-control"/>
+                                <!-- <div *ngIf="submitted && f.total.errors" class="invalid-feedback"> 
+                                    <div *ngIf="f.total.errors.required">total is required</div>
+                                </div> -->
+                        
+                        </div>
+                        <div class="form-group col-8">
+                          <label>Tstatus</label>
+                          <input type="text" formControlName="Tstatus" class="form-control"  />
+                           <!-- <div *ngIf="submitted && f.Tstatus.errors" class="invalid-feedback"> 
+                              <div *ngIf="f.total.Tstatus.required">total is required</div>
+                          </div> -->
+                  
+                  </div>
+                        <div class="modal-footer">
+                             <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="Buy()">Buy</button>
+                            <!-- <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="Addtocart()">Add</button> -->
+                          </div>
+                            </div>
+                            </div>
+                            </form>
+                       <!-- </form>  -->
+                       </div>
+                  </div>
+                </div>
+              </div>
+                    
+              </section> 
+            <!-- </form>  -->

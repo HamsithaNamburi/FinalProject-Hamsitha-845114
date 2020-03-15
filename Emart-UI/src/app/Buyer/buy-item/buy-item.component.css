@@ -1,0 +1,24 @@
+.navbar {
+    width: 100%;
+      background-color:grey;
+      /*overflow: auto;*/
+      /* margin-bottom: 0;
+      border-radius: 0; 
+     background-color:grey;*/
+      border-style:groove;
+     
+    }
+    
+    .navbar a {
+      float: right;
+      /*padding: 12px;*/
+      color:white;
+      text-decoration: none;
+      font-size: 17px;
+      margin-left:10px;
+    }
+    
+    .navbar a:hover {
+      background-color:dodgerblue;
+    }
+    

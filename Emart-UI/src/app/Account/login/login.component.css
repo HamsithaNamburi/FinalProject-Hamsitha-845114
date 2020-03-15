@@ -1,0 +1,178 @@
+.text {
+    border-radius: 50px;
+  }
+  .img{
+ width: 10;
+ height: 10;
+  }
+.nav.navbar-brand{
+    font-weight: 800;
+    font-style:bold;
+    font-size: xx-large;
+    text-decoration-color: cornflowerblue;
+    
+}
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color:grey;
+}
+.nav.navbar-nav.navbar-text li a{
+        color: white;
+       
+    }
+
+
+
+
+
+#button {
+    margin-left: 160px; 
+    padding: 0px 10px;
+    height: 100px;
+    width: 1060px;
+    animation: blinkingText 1.2s infinite;
+    font-size:30px;
+    
+}
+.default {
+border-color: #e7e7e7;
+color: black;
+}
+
+.default:hover {
+background-color:black;
+}
+
+@keyframes blinkingText {
+    0% {
+        color: #000;
+    }
+
+    49% {
+        color: #000;
+    }
+
+    60% {
+        color: transparent;
+    }
+
+    99% {
+        color: transparent;
+    }
+
+    100% {
+        color: #000;
+    }
+}
+
+.card {
+    margin-left: 350px; 
+    padding: 0px 10px;
+    
+    
+}
+.card-img-top{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    height: 150px;
+    align-content: center;
+}
+
+.row.content {
+    height: 100px;
+   
+}
+
+/* Set gray background color and 100% height
+.sidenav {
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    color: white;
+    background-color:lightskyblue;
+    overflow-x: hidden;
+    padding-top: 20px;
+
+} */
+
+
+.icon-bar {
+    width: 100%;
+    background-color: black;
+    overflow: auto;
+    margin-bottom:10px;
+}
+
+
+#bgimg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image:url("https://thumbs.dreamstime.com/b/gold-gift-box-black-background-festive-background-gold-gift-box-gold-ribbon-bow-black-background-flat-lay-top-167623046.jpg")
+}
+.nav.navbar-nav.navbar-centre li a{
+        color: white;
+    }
+
+ /* On small screens, set height to 'auto' for sidenav and grid  
+ @media screen and (max-width:767px) {
+    .sidenav {
+        height: auto;
+        padding: 15px;
+    }
+
+    .row.content {
+        height: auto;
+    }
+} */
+h1{
+    font-size: 45px;
+    margin-top: 70px;
+    margin-bottom: 60px;
+
+}
+.h1 text{
+    color:white;
+}
+.input-group{
+    margin-top:20px; 
+    margin-left:30px;
+}
+.input-group-addon{
+    background: transparent;
+    border-radius: 0px;
+    border:0px;
+    border-bottom: 1px solid grey;
+    font-size: 20px;
+    color:gray;
+    margin-left:40px;
+}
+.form-control{
+    background: transparent;
+    border-radius: 0px;
+    border:0px;
+    border-bottom: 1px solid grey;
+    font-size: 22px;
+    height: 40px;
+    padding: 19px;
+    color: gray;
+    margin-left:90px;
+}
+.btn-secondary{
+    margin-top:35px;
+    width:200px;
+    margin-left:250px;
+font-size: 18px;
+background: dodgerblue;
+}
+.radiobtn{
+    margin-top:10px;
+    width:200px;
+    margin-left:250px;
+   font-size: 18px;
+   color: white;
+}

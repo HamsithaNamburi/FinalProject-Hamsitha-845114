@@ -1,0 +1,188 @@
+<meta name="viewport" content="width=device-width" />
+<title>@ViewBag.Title</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>  
+<!-- <div class="navbar">
+    <h2>Emart</h2>
+  </div> -->
+           <div class="card m-2">
+                <h6 class="ribbon">
+                    <strong class="ribbon-content">View Items</strong>
+                    </h6>
+              
+                <!-- <div class="card-body" ng-show="showme" ng-model="item" style="background-color: lightskyblue;margin-left:400px; margin-right:400px;margin-top:-1em; text-align: center; align-content: center; ">
+                    <form [formGroup]="viewitems" (ngSubmit)="onSubmit()" >
+                    
+                            <div class="offset-3">
+                            <div class="form-group col-8 ">
+                                <label>Category Id</label>
+                                <input type="text"   formControlName="category_id"  class="form-control form-rounded" [ngClass]="{ 'is-invalid': submitted && f.category_id.errors }" />
+                                <div *ngIf="submitted && f.category_id.errors" class="invalid-feedback">
+                                    <div *ngIf="f.category_id.errors.required">First Name is required</div>
+                                    <div *ngIf="f.category_id.errors.pattern">Enter only Alphabets</div>
+                                </div>
+                            </div><br/>
+                            <div class="form-group col-8 ">
+                                <label>subcategory id</label>
+                                <input type="text" class="text" formControlName="subcategory_id" class="form-control form-rounded" [ngClass]="{ 'is-invalid': submitted && f.subcategory_id.errors }" />
+                                <div *ngIf="submitted && f.subcategory_id.errors" class="invalid-feedback">
+                                    <div *ngIf="f.subcategory_id.errors.required">Enter only Alphabets</div> 
+                                    <div *ngIf="f.subcategory_id.errors.pattern">Last Name is required</div>
+                                </div>
+                            </div>
+                        <br/>
+                      
+                            <div class="form-group col-8 ">
+                                <label>Item_Id</label>
+                                <input type="text" class="text" formControlName="id" class="form-control form-rounded" [ngClass]="{ 'is-invalid': submitted && id.errors }" />
+                                <div *ngIf="submitted && f.id.errors" class="invalid-feedback">
+                                    <div *ngIf="f.id.errors.required">Last Name is required</div>
+                                </div>
+                            </div>
+                        
+                       <br/>
+                        <div class="form-group col-8">
+                            <label>Item Name</label>
+                            <input type="text" class="text" formControlName="name" class="form-control form-rounded" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+                            <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                                <div *ngIf="f.name.errors.required">Mobile no is required</div>
+                                <div *ngIf="f.name.errors.pattern">Mobile no Must be Valid</div>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="form-group col-8">
+                            <label>Description</label>
+                            <textarea type="text" class="text" formControlName="description" class="form-control form-rounded" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" ></textarea>
+                            <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
+                                <div *ngIf="f.description.errors.required">Email is required</div>
+                                <div *ngIf="f.description.errors.email">Email must be a valid email address</div>
+                            </div>
+                        </div>
+                    <br/>
+                     
+                            <div class="form-group col-8 ">
+                                <label>Price</label>
+                                <input type="number" class="text" formControlName="price" class="form-control form-rounded" [ngClass]="{ 'is-invalid': submitted && f.price.errors }" />
+                                <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
+                                    <div *ngIf="f.price.errors.required">Password is required</div>
+                                    <div *ngIf="f.price.errors.minlength">Password must be at least 6 characters</div>
+                                </div>
+                            </div>
+                            <div class="form-group col-8 ">
+                                <label>stock_number</label>
+                                <input type="number" class="text" formControlName="stock_number" class="form-control form-rounded" [ngClass]="{ 'is-invalid': submitted && f.stock_number.errors }" />
+                                <div *ngIf="submitted && f.stock_number.errors" class="invalid-feedback">
+                                    <div *ngIf="f.stock_number.errors.required">Password is required</div>
+                                    <div *ngIf="f.stock_number.errors.minlength">Password must be at least 6 characters</div>
+                                </div>
+                            </div>
+                            <div class="form-group col-8 ">
+                                <label>Remarks</label>
+                                <input type="text"class="text" formControlName="remarks" class="form-control form-rounded" [ngClass]="{ 'is-invalid': submitted && f.remarks.errors }" />
+                                <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
+                                    <div *ngIf="f.remarks.errors.required">Password is required</div>
+                                    <div *ngIf="f.remarks.errors.minlength">Password must be at least 6 characters</div>
+                                </div>
+                            </div>
+                            </div>
+                           
+                    <br/>
+                        
+                        <div class="text-center">
+                            <button class="btn btn-primary mr-1" (click)="viewitem()">submit</button>
+                            <button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div> -->
+     <div class="fluid continer">      
+<table class="table table-border"><tr>
+    <th>itemid</th>
+    <th>itemname</th>
+    <th>price</th>
+    <th>description</th>
+  <th>stock</th>
+  <th>remarks</th>
+  <th>sellerid</th>
+</tr>
+<tr *ngFor="let item of list">
+<td>{{item.id}}</td>
+   <td>{{item.itemName}}</td>
+   <td>{{item.price}}</td>
+  <td>{{item.itemDescription}}</td> 
+    <td>{{item.stockNumber}}</td>
+    <td>{{item.remarks}}</td>
+  <td>{{item.sellerId}}</td>
+  <td><img src='assets/images/{{item.image}}' style="height:150px; width:150px;"><br></td>
+  <td><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" (click)="viewItem(item.id)">Update</button></td>
+  <td><button type="button" class="btn btn-info btn-lg"  (click)="Delete(item.id)">Delete</button></td> 
+</tr>
+</table>
+<div class="modal" id="myModal">
+    <div class="modal-dialog"> 
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Update Items</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+            <form [formGroup]="viewitems"  style="margin-top:2%;">
+                <div class="offset-3">
+                    <div class="form-group col-8">
+                        <label>Item Name</label>
+                        <input type="text" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+                    <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                        <div *ngIf="f.name.errors.required">Item name is required</div>
+                    </div>
+                
+                </div>
+                <div class="form-group col-8">
+                    <label>Stock Number</label>
+                    <input type="text" formControlName="stock_number" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.stock_number.errors }" />
+                    <div *ngIf="submitted && f.stock_number.errors" class="invalid-feedback">
+                        <div *ngIf="f.stock_number.errors.required">Stock Number is required</div>
+                    </div>
+            
+            </div>
+                <div class="form-group col-8">
+                    <label>Price</label>
+                    <input type="text" formControlName="price" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price.errors }" />
+                    <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
+                        <div *ngIf="f.price.errors.required">Brief Details is required</div>
+                    </div>
+            
+            </div>
+            <div class="form-group col-8">
+                <label>Description</label>
+                <input type="text" formControlName="description" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
+                <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
+                    <div *ngIf="f.description.errors.required">Description is required</div>
+                </div>
+        
+        </div>
+        </div>
+    
+          </form>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="edit()">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

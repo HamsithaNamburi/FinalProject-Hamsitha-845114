@@ -1,0 +1,82 @@
+Started by an SCM change
+Running as SYSTEM
+Building in workspace C:\Program Files (x86)\Jenkins\workspace\EmartUI
+No credentials specified
+ > git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/HamsithaNamburi/FinalProject-Hamsitha-845114 # timeout=10
+Fetching upstream changes from https://github.com/HamsithaNamburi/FinalProject-Hamsitha-845114
+ > git.exe --version # timeout=10
+ > git.exe fetch --tags --force --progress -- https://github.com/HamsithaNamburi/FinalProject-Hamsitha-845114 +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision 27b7cb14213698d2f9c49d4e79bd5a19cd726dea (refs/remotes/origin/master)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f 27b7cb14213698d2f9c49d4e79bd5a19cd726dea # timeout=10
+Commit message: "Initial"
+ > git.exe rev-list --no-walk 550d07d430b44e9be7fd049567047f2dfc94c0d0 # timeout=10
+[EmartUI] $ cmd /c call C:\Windows\TEMP\jenkins2239707756774329516.bat
+
+C:\Program Files (x86)\Jenkins\workspace\EmartUI>CD Emart-UI 
+
+C:\Program Files (x86)\Jenkins\workspace\EmartUI\Emart-UI>npm install 
+npm WARN bootstrap@4.4.1 requires a peer of jquery@1.9.1 - 3 but none is installed. You must install peer dependencies yourself.
+npm WARN bootstrap@4.4.1 requires a peer of popper.js@^1.16.0 but none is installed. You must install peer dependencies yourself.
+npm WARN karma-jasmine-html-reporter@1.5.2 requires a peer of jasmine-core@>=3.5 but none is installed. You must install peer dependencies yourself.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules\webpack-dev-server\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules\watchpack\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules\karma\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules\@angular\compiler-cli\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+
+audited 19101 packages in 45.418s
+found 1 moderate severity vulnerability
+  run `npm audit fix` to fix them, or `npm audit` for details
+[EmartUI] $ cmd /c call C:\Windows\TEMP\jenkins3444664359550412473.bat
+
+C:\Program Files (x86)\Jenkins\workspace\EmartUI>CD Emart-UI 
+
+C:\Program Files (x86)\Jenkins\workspace\EmartUI\Emart-UI>npm run ng -- build --prod  
+
+> emart-ui@0.0.0 ng C:\Program Files (x86)\Jenkins\workspace\EmartUI\Emart-UI
+> ng "build" "--prod"
+
+Generating ES5 bundles for differential loading...
+ES5 bundle generation complete.
+
+chunk {3} polyfills-es5.8e50a9832860f7cf804a.js (polyfills-es5) 126 kB [initial] [rendered]
+chunk {2} polyfills-es2015.5b10b8fd823b6392f1fd.js (polyfills) 36.2 kB [initial] [rendered]
+chunk {0} runtime-es2015.c5fa8325f89fc516600b.js (runtime) 1.45 kB [entry] [rendered]
+chunk {0} runtime-es5.c5fa8325f89fc516600b.js (runtime) 1.45 kB [entry] [rendered]
+chunk {1} main-es2015.a6a2d521449bdbe51491.js (main) 556 kB [initial] [rendered]
+chunk {1} main-es5.a6a2d521449bdbe51491.js (main) 629 kB [initial] [rendered]
+chunk {4} styles.6391b3047ebe7a8eb4d3.css (styles) 154 kB [initial] [rendered]
+Date: 2020-03-14T17:45:07.797Z - Hash: c7d6dbbfe4d51b4f81ca - Time: 64897ms
+[EmartUI] $ cmd /c call C:\Windows\TEMP\jenkins7823302182637580817.bat
+
+C:\Program Files (x86)\Jenkins\workspace\EmartUI>xcopy /s "C:\Program Files (x86)\Jenkins\workspace\EmartUI\Emart-UI\dist\Emart-UI" "C:\inetpub\wwwroot\EMart"  
+Overwrite C:\inetpub\wwwroot\EMart\3rdpartylicenses.txt (Yes/No/All)? ?÷ðÕ•Ôåñç©Pæñ �S$ùñ–S êñð6S°7S6SPæñ˜èñðìñ.]©�èñðs†kˆ�Sp5S•À†kà¶R¤†kh·Rd©¤†kh·RØêñ€�S•ˆ�Sˆ�è†k˜¸RC:\Program Files (x86)\Jenkins\workspace\EmartUI\Emart-UI\dist\Emart-UI\3rdpartylicenses.txt¤†kh·RPæñ\GEnkiè†k˜¸RC:\inetpub\wwwroot\EMart\3rdpartylicenses.txt6	¨ƒRRR(’S0–SrrRƒ·wôêñ0Æw8–SÿÑwú]ˆŠR�ëñ·	¾6	0’SÊöÿÿÿRlÕ•¼ìñ�ëñ&+þuàìñX€°R�S¸ƒ†k_LÁ$P¦Rˆêñ,$þuULÁ$˜íñ êñå'þuüÿÿÿ˜íñ¤†kh·R˜èñ-úñ�Ÿwîdÿþÿÿÿ.“q$ëñò8þuLÁ$˜íñÿÿÿÿ�ëñTëñ{mu	˜íñÿÿÿÿ�ëñ˜jBÀB”ìñ…�u¨ìñ�ëñ”ìñ–�u˜íñÿÿÿÿ�ëñ:�íñÇ�u¨ìñCÔÅ|ø(¼ëñ`ïw,èwÀfRÔÅ|øÔÂb‡üëñ³îwÀfR0’S˜ìñð…gæÀfR ˜ìñD’S�ìñ•°wI RPSÜ4SPS•°wY \ìñ¬,uAHìñ˜jBÀBB�ìñ°€uÉw€ìñmw°7SRf[ˆŠœìñpiu&:d0fRÈ4S°7S fRRÌìñØìñÜwðs†k°7SôìñHt†kR°7S,¶Ú4íñ5©ˆ�S�íñˆoS$ùñìùñìùñ°7S°R�oSðØÿÿØxS\$ùñ@íùñn2©ˆoS�íñ€°Rà@S H©Fp8Sà[SˆoSÐ5S0tS€°R°iS0tSà@SÐ5Sð4S$ùñè†k˜¸RC:\inetpub\wwwroot\EMart\3rdpartylicenses.txtx86)\Jenkins\workspace\EmartUI\Emart-UI\dist\Emart-UI¤†kh·R˜íñ-Œ†k˜¸RC:\inetpub\wwwroot\EMartŒ†kh·RàïñeRRè†k˜¸Rwèøñðn†kùñ�h†kRx¼RØøñèE†k$ùñS© H©Œ†k`¶R		Œ†kð¶RGŒ†kà¶RH¼RúDˆŠRŒ†kð¶RŒ†kà¶RÈ¼R¦þÿÿŒ†kð¶RŒ†kà¶R(¼RÆsRƒRŒ†kð¶RRŒ†kà¶RðPSRŒ†kð¶R@SŒ†kà¶R`OS Ìw?SŒ†kð¶RCˆŠŒ†kà¶R°PSŒ†kð¶RGŒ†kà¶RàPSBˆŠŒ†kð¶RsRŒ†kà¶RÐOSRRŒ†kð¶RŒ†kà¶RPOSÐ?S¤†kh·R(òñŒ†kŒ†k˜¸RC:\Program Files (x86)\Jenkins\workspace\EmartUI\Emart-UI\dist\Emart-UIŒ†kh·RpôñG><¶R·wŒ†kà¶R¼ROˆŠRŒ†kð¶RŒ†kà¶RX¼RŒ†kð¶RŒ†kà¶RØ¼RÜsRŒ†kð¶RŒ†kà¶R(½RÀRRŒ†kð¶RÔýuŒ†kà¶Rˆ»RGŒ†kð¶RŒ†kà¶R˜»RŒ?SŒ†k¸¸RŒ†kà¶R PSŒ†k¸¸RŒ†kà¶R05S
+Œ†kÈ¸RŒ†kà¶R°[SŒ†kè¸RæP7SŒ†kà¶RÈ»RæŒ†kè¸RŒ†kà¶Rè»RŒ†kè¸R5SŒ†kà¶R˜¼RWvŒ†kè¸RŒ†kà¶Rx¼R€·Ú`¨†kúñ'©Ä Ú$©ø¼Rð†k8ºRÐ†kx·R=VðØÿÿÿÿÿÿ¨íRHÝRþRÀ†kà¶R(QSF(QSGHÝR¨íRþR,V1uèjS8mSÀLSð4SuØcS�©ùñ,�©Húñ€B©$Ú‚XúñJA©�qBèB„ Ú`B©`B©À`B©,úñ´úñ€B©üÛ‚húñYc“tÀ@c“tÄúñt{wÀÊMˆŠÀtúñÌúñ�ŸwöÕdÿÔúñD{wÿÿÿÿ=�w`B©ÀActx 3Ü 4|Nï&˜Dà\ºq2ó<JˆB[IY-Ì2	úÍêÎ2üB@0È_P8p^ÐbD(±4VŒ’	ì|ÜX øŒ„-˜0˜01Ìü1ð	ì2(3SsHd,Œ¤,^^$8C:\Windows\WinSxs\Nï&Dd\ºq2óÀJB[IY-P2„úÍêÎ2€
+BÄ
+0È_P8ô
+^TbD(±¸V’Microsoft.Windows.SystemCompatiblel
+Ð,Ú°þ{¼åÕ¶Microsoft.Windows.SystemCompatible,processorArchitecture="x86",publicKeyToken="6595b64144ccf1df",type="win32",version="6.0.18362.657"System Default Contextx86_microsoft.windows.systemcompatible_6595b64144ccf1df_6.0.18362.657_none_360f2f33e4214fa5Microsoft.Windows.IsolationAutomationlx
+Overwrite C:\inetpub\wwwroot\EMart\3rdpartylicenses.txt (Yes/No/All)? 
+C:\Program Files (x86)\Jenkins\workspace\EmartUI>C:\Windows\System32\iisreset.exe
+
+Attempting stop...
+
+Internet services successfully stopped
+
+Attempting start...
+
+Internet services successfully restarted
+
+
+C:\Program Files (x86)\Jenkins\workspace\EmartUI>exit 0 
+Finished: SUCCESS

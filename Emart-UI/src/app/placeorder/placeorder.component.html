@@ -1,0 +1,148 @@
+<!-- <div class="container">
+<div class="card-body"  style="background-color: lightskyblue;margin-left:400px; margin-right:400px;margin-top:-1em; text-align: center; align-content:center; ">
+    <form [formGroup]="placeorder" (ngSubmit)="onSubmit()">
+    <div *ngFor="let item of list">
+            <div class="offset-3">
+                <label>Item Name</label>
+                <input type="text" formControlName="name" class="form-control"  value="{{item.itemName}}" />
+            <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                <div *ngIf="f.name.errors.required">Item name is required</div>
+            </div>
+        
+        </div>
+        <div class="form-group col-8">
+            <label>Price</label>
+            <input type="text" formControlName="price" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.price.errors }" value="{{item.price}}" />
+            <div *ngIf="submitted && f.price.errors" class="invalid-feedback">
+                <div *ngIf="f.price.errors.required">Brief Details is required</div>
+            </div>
+    
+    </div>
+      
+            <div class="form-group col-8 ">
+                <label>Remarks</label>
+                <textarea type="text" class="text" formControlName="remarks" class="form-control form-rounded" [ngClass]="{ 'is-invalid': submitted && f.remarks.errors }"></textarea>
+                <div *ngIf="submitted && f.remarks.errors" class="invalid-feedback">
+                    <div *ngIf="f.remarks.errors.required">Last Name is required</div>
+                    <div *ngIf="f.remarks.errors.pattern">Mobile no Must be Valid</div>
+                </div>
+            </div>
+        
+       <br/>
+        <div class="form-group col-8">
+            <label>Transaction Name</label>
+            <input type="text" class="text" formControlName="TName" class="form-control form-rounded" [ngClass]="{ 'is-invalid': submitted && f.TName.errors }" />
+            <div *ngIf="submitted && f.TName.errors" class="invalid-feedback">
+                <div *ngIf="f.TName.errors.required">Mobile no is required</div>
+                <div *ngIf="f.TName.errors.pattern">Mobile no Must be Valid</div>
+            </div>
+        </div>
+        <br/>
+        <div class="form-group col-8">
+            <label>Number of Items</label>
+            <input type="number" class="text" formControlName="NumberOfItems" class="form-control form-rounded" [ngClass]="{ 'is-invalid': submitted && f.NumberOfItems.errors }" >
+            <div *ngIf="submitted && f.NumberOfItems.errors" class="invalid-feedback">
+                <div *ngIf="f.NumberOfItems.errors.required">Email is required</div>
+                <div *ngIf="f.NumberOfItems.errors.email">Email must be a valid email address</div>
+            </div>
+    
+            </div>
+        </div>
+    </form>
+</div>
+
+</div> -->
+<div class="row">
+    <div class="col-75">
+      <div class="container">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()" >
+        
+          <div class="row">
+            <div class="col-50">
+              <h3>Billing Address</h3>
+              <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+              <input type="text" id="fname" formControlName="firstname" required>
+              <div *ngIf="f.firstname.errors.required"> Full Name is required</div>
+              <label for="email"><i class="fa fa-envelope"></i> Email</label>
+              <input type="text" id="email" formControlName="email" >
+              <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+              <input type="text" id="adr" formControlName="address" >
+              <label for="city"><i class="fa fa-institution"></i> City</label>
+              <input type="text" id="city" formControlName="city" >
+  
+              <div class="row">
+                <div class="col-50">
+                  <label for="state">State</label>
+                  <input type="text" id="state" formControlName="state" >
+                </div>
+                <div class="col-50">
+                  <label for="zip">Zip</label>
+                  <input type="text" id="zip" formControlName="zip" >
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-50">
+              <h3>Payment</h3>
+              <label for="fname">Accepted Cards</label>
+              <img class="img-fluid cc-img" src="https://www.prepbootstrap.com/Content/images/shared/misc/creditcardicons.png">
+              <!-- <div class="icon-container">
+                <i class="fa fa-cc-visa" style="color:navy;"></i>
+                <i class="fa fa-cc-amex" style="color:blue;"></i>
+                <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                <i class="fa fa-cc-discover" style="color:orange;"></i>
+              </div> -->
+              <!-- <select>
+                <option value="0">Transaction Type</option>
+                <option value="1">Creditcard</option>
+                <option value="2">Debitcard</option>
+                <option Value="3">Cash on Delivery</option>
+              </select> -->
+              <div class="form-group">
+              <fieldset>
+                <label>Transaction Type</label>
+            Creditcard:<input type="radio" value="creditcard" formControlName="t1" [(ngModel)] = 'transaction' ng-init="transaction = true" >
+            Debit Card:<input type="radio" value="DebitCard" formControlName="t1" [(ngModel)] = 'transaction'>
+            Cash on Delivery<input type="radio" value="cashondelivery" formControlName="t1" [(ngModel)] = 'transaction' ng-init="transaction=false">
+          </fieldset>
+        </div>
+        <div *ngIf="transaction=='creditcard'||transaction=='DebitCard'  else cashondelivery"  class="form-group" >
+        
+        <!-- <ng-template #cashondelivery> -->
+          <label for="cname">Name on Card</label>
+          <input type="text" id="cname" formControlName="cardname" placeholder="card Holder Name">
+          <label for="ccnum">Credit card number</label>
+          <input type="text" id="ccnum" formControlName="cardnumber" placeholder="1111-2222-3333-4444">
+          <label for="expmonth">Exp Month</label>
+          <input type="text" id="expmonth" formControlName="expmonth" placeholder="month">
+          <div class="row">
+            <div class="col-50">
+              <label for="expyear">Exp Year</label>
+              <input type="text" id="expyear" formControlName="expyear" placeholder="year">
+            </div>
+            <div class="col-50">
+              <label for="cvv">CVV</label>
+              <input type="text" id="cvv" formControlName="cvv" placeholder="cvv">
+            </div>
+          </div>
+        <!-- </ng-template> -->
+        <ng-template #cashondelivery>
+          <div>
+         <h1>  Orderd Palced Seccessfully</h1>
+          </div>
+        </ng-template>
+        
+              </div>
+            
+          </div> 
+          </div> 
+      
+          <label>
+            <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+          </label>
+          <input type="submit" value="Continue to checkout"  (click)="b()"class="btn">
+        </form>
+      
+    </div>
+    </div>
+    
